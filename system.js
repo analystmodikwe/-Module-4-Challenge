@@ -92,3 +92,33 @@ for (let attendee of attendees){
         console.log(`${attendee.name}: LOUNGE ACCESS is DENIED`);
     }
 };
+
+// challenge 5
+console.log("\n===== CHALLENGE 5 =====");
+// Create let searchName = "Zanele"; and search through the attendee list. When the attendee is found, display their details and immediately stop searching
+
+let searchName = "Zanele"
+
+for (let attendee of attendees){
+
+    if(attendee.name === searchName ){
+              
+        console.log(line);
+        console.log("ATTENDEE FOUND");
+        console.log(`Name: ${attendee.name}`);
+        console.log(`Age: ${attendee.age}`);
+        console.log(`Ticket: ${attendee.ticket}`);
+        console.log(`Valid Ticket: ${attendee.hasTicket}`);
+        console.log(line);
+        break;
+    }
+};
+
+    
+
+    
+
+
+
+
+
