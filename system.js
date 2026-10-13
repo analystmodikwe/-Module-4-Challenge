@@ -45,3 +45,33 @@ if(attendee.age >= 18 && attendee.hasTicket === true) {
     }else{
         console.log(`${attendee.name}: ${declined}: YOU ARE ${underAge} AND YOU HAVE ${ticketCheck} `);
 }
+
+// challenge 3 
+console.log("\n===== CHALLENGE 3 =====");
+
+let ticketVIP = "Gold";
+let ticketGENERAL = "BLUE";
+
+
+// switch case for People who successfully enter, VIP ticket holders receive a GOLD WRISTBAND, 
+// General ticket holders receive a BLUE WRISTBAND, and any other ticket type should produce UNKNOWN TICKET TYPE.
+for (let attendee of attendees)
+    if(attendee.age >= 18 && attendee.hasTicket === true){
+        switch(attendee.ticket){
+            case "VIP":
+                console.log(line);
+                console.log(attendee.name);
+                console.log(`Ticket:${attendee.ticket}`);
+                console.log(ticketVIP);
+                console.log(line); break;
+                
+            case "General": 
+                console.log(line);
+                console.log(attendee.name);
+                console.log(`Ticket:${attendee.ticket}`);
+                console.log(ticketGENERAL); 
+                console.log(line);break;
+
+            default:console.log(" UNKNOWN TICKET TYPE.")
+        }
+    }
