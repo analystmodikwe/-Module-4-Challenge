@@ -114,8 +114,17 @@ for (let attendee of attendees){
     }
 };
 
-    
-
+// CHALLENGE 6
+console.log("\n===== CHALLENGE 6 =====");
+// continue skips the rest of the current pass through the loop and jumps straight to the next item it will check the person with no valid ticket and then skip to the next
+for (let attendee of attendees){
+    if(attendee.hasTicket === false){
+        continue;
+       
+    } else {
+        console.log(`Checking ${attendee.name}...`)
+    } 
+}
     
 
 
