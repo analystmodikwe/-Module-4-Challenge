@@ -83,6 +83,8 @@ for (let attendee of attendees){
 // chllange 4
 console.log("\n===== CHALLENGE 4 =====");
 
+// The
+// person must have a valid ticket, have a VIP ticket, and be 18 or older
 for (let attendee of attendees){
     if(attendee.age >= 18 && attendee.hasTicket === true && attendee.ticket === "VIP"){
         console.log(`${attendee.name}: LOUNGE ACCESS is APPROVED`);
