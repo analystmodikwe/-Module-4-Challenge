@@ -32,8 +32,9 @@ let underAge = "UNDER 18";
 let ticketCheck = "NO VALID TICKET";
 
 // a for..of loop and if, else,els if for attendees who may enter who are 18 and above and have tickets
-for (let attendee of attendees )
-if(attendee.age >= 18 && attendee.hasTicket === true) {
+for (let attendee of attendees ){
+
+    if(attendee.age >= 18 && attendee.hasTicket === true) {
     console.log(`${attendee.name}: ${success}`);
 
     }else if(attendee.age < 18 && !attendee.hasTicket) {
@@ -44,6 +45,7 @@ if(attendee.age >= 18 && attendee.hasTicket === true) {
 
     }else{
         console.log(`${attendee.name}: ${declined}: YOU ARE ${underAge} AND YOU HAVE ${ticketCheck} `);
+    }
 }
 
 // challenge 3 
@@ -52,10 +54,10 @@ console.log("\n===== CHALLENGE 3 =====");
 let ticketVIP = "Gold";
 let ticketGENERAL = "BLUE";
 
-
 // switch case for People who successfully enter, VIP ticket holders receive a GOLD WRISTBAND, 
 // General ticket holders receive a BLUE WRISTBAND, and any other ticket type should produce UNKNOWN TICKET TYPE.
-for (let attendee of attendees)
+for (let attendee of attendees){
+
     if(attendee.age >= 18 && attendee.hasTicket === true){
         switch(attendee.ticket){
             case "VIP":
@@ -75,3 +77,10 @@ for (let attendee of attendees)
             default:console.log(" UNKNOWN TICKET TYPE.")
         }
     }
+}
+
+
+// chllange 4
+console.log("\n===== CHALLENGE 4 =====");
+
+for (let attendee of attendees)
