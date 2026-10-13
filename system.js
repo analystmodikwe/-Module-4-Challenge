@@ -8,3 +8,12 @@ let attendees = [
   { name: "Karabo",  age: 16, ticket: "VIP",     hasTicket: true,  checkedIn: false, spend: 900 },
   { name: "Michael", age: 28, ticket: "General", hasTicket: true,  checkedIn: false, spend: 450 }
 ];
+
+console.log("\n===== CHALLENGE 1 =====");
+// using for..of loop to displayname age ticket valid ticket
+for (let waitingToEnter of attendees) {
+
+    if (waitingToEnter) {
+        console.log(`Name: ${waitingToEnter.name}, Age: ${waitingToEnter.age}, Ticket: ${waitingToEnter.ticket}, Valid Ticket: ${waitingToEnter.hasTicket}`);
+    }
+}
