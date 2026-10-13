@@ -6,7 +6,7 @@ let attendees = [
   { name: "Jason",   age: 31, ticket: "General", hasTicket: false, checkedIn: false, spend: 0 },
   { name: "Zanele",  age: 20, ticket: "General", hasTicket: true,  checkedIn: false, spend: 650 },
   { name: "Karabo",  age: 16, ticket: "VIP",     hasTicket: true,  checkedIn: false, spend: 900 },
-  { name: "Michael", age: 28, ticket: "General", hasTicket: true,  checkedIn: false, spend: 450 }
+  { name: "Michael", age: 28, ticket: "General", hasTicket: true,  checkedIn: false, spend: 450 } 
 ];
 
 console.log("\n===== CHALLENGE 1 =====");
@@ -212,7 +212,11 @@ console.log("\n===== CHALLENGE 9 =====");
 // change, the correct person must still be identified
 let biggestSpender = attendees[0];
 for (let attendee of attendees) {
-    if (attendee.spend > highestSpender.spend){
-        highestSpender = attendee
+    if (attendee.spend > biggestSpender.spend){
+        biggestSpender = attendee
     }
 }
+console.log (" ===== TOP CUSTOMER =====");
+console.log(`NAME: ${biggestSpender.name}`);
+console.log(`AMOUNT SPENT: ${biggestSpender.spend}`);
+console.log("REWARD: BACKSTAGE UPGRADE");
