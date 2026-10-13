@@ -149,7 +149,7 @@ for(let attendee of attendees){
     
 // challenge8
 console.log("\n===== CHALLENGE 8 =====");
-// Calculate the total attendees in the queue, valid tickets, invalid tickets, under-18 attendees,
+// Calculating the total attendees in the queue, valid tickets, invalid tickets, under-18 attendees,
 // General ticket holders, VIP ticket holders, total amount spent, average amount spent per
 // attendee, and highest-spending attendee.
 
@@ -181,11 +181,13 @@ for (let attendee of attendees) {
     }else{
         generalCount ++;
     }
+
+    totalSpend += attendee.spend   
 }
 console.log(`totalAttendees: ${totalAttendees}`);
 console.log(`validTickets: ${validTickets}`);
 console.log(`invalidTickets: ${invalidTickets}`);
 console.log(`vipCount: ${vipCount}`);
-console.log(`generalCount: ${generalCount}`);
-// console.log(`under18: ${under18}`);
+console.log(`generalCount: ${ totalSpend }`);
+// console.log(`totalSpend: ${attendee.spend}`);
 // console.log(`under18: ${under18}`);
