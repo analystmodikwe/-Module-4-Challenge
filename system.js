@@ -187,11 +187,19 @@ for (let attendee of attendees) {
 // calculating the average per attendee
 let averageAmount = totalSpend / totalAttendees
 
+// calculating highest spending attendee
+let highestSpender = attendees[0];
+for (let attendee of attendees) {
+    if (attendee.spend > highestSpender.spend){
+        highestSpender = attendee
+    }
+}
+
 // consolelogs
 console.log(`totalAttendees: ${totalAttendees}`);
 console.log(`validTickets: ${validTickets}`);
 console.log(`invalidTickets: ${invalidTickets}`);
 console.log(`vipCount: ${vipCount}`);
 console.log(`average amount spent per attendee: ${ averageAmount}`);
-// console.log(`totalSpend: ${attendee.spend}`);
+console.log(`highest Spending attendee: ${highestSpender.name}`);
 // console.log(`under18: ${under18}`);
