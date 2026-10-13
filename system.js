@@ -10,10 +10,37 @@ let attendees = [
 ];
 
 console.log("\n===== CHALLENGE 1 =====");
+let line = "=============================="
 // using for..of loop to displayname age ticket valid ticket
 for (let waitingToEnter of attendees) {
 
     if (waitingToEnter) {
-        console.log(`Name: ${waitingToEnter.name}, Age: ${waitingToEnter.age}, Ticket: ${waitingToEnter.ticket}, Valid Ticket: ${waitingToEnter.hasTicket}`);
+        console.log(line);
+        console.log(`Name: ${waitingToEnter.name}`);
+        console.log(`Age: ${waitingToEnter.age}`);
+        console.log(`Ticket: ${waitingToEnter.ticket}`);
+        console.log(`Valid Ticket: ${waitingToEnter.hasTicket}`);
+        console.log(line)
     }
+}
+
+console.log("\n===== CHALLENGE 2 =====");
+let success = "ENTRY APPROVED";
+let declined = "ENTRY DENIED";
+let underAge = "UNDER 18";
+let ticketCheck = "NO VALID TICKET";
+
+
+for (let attendee of attendees )
+if(attendee.age >= 18 && attendee.hasTicket === true) {
+    console.log(`${attendee.name}: ${success}`);
+
+    }else if(attendee.age < 18 && !attendee.hasTicket) {
+        console.log(`${attendee.name}: ${declined}: ${ticketCheck}`);
+
+    }else if(attendee.age < 18 ) {
+        console.log(`${attendee.name}: ${declined}: ${underAge}`);
+
+    }else{
+        console.log(`${attendee.name}: ${declined}: YOU ARE ${underAge} AND YOU HAVE ${ticketCheck} `);
 }
