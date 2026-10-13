@@ -171,7 +171,12 @@ for (let attendee of attendees) {
     else if(attendee.hasTicket === false) {
         invalidTickets ++;
     }
+
+    if(attendee.age < 18) {
+        under18 ++;
+    }
 }
 console.log(`totalAttendees: ${totalAttendees}`);
 console.log(`validTickets: ${validTickets}`);
 console.log(`invalidTickets: ${invalidTickets}`);
+console.log(`under18: ${under18}`);
