@@ -202,4 +202,17 @@ console.log(`invalidTickets: ${invalidTickets}`);
 console.log(`vipCount: ${vipCount}`);
 console.log(`average amount spent per attendee: ${ averageAmount}`);
 console.log(`highest Spending attendee: ${highestSpender.name}`);
-// console.log(`under18: ${under18}`);
+
+
+// challenge9
+console.log("\n===== CHALLENGE 9 =====");
+
+// Determining the attendee who has spent the most money automatically. starting with let
+// biggestSpender = attendees[0]; and compare attendees while looping. If spending values
+// change, the correct person must still be identified
+let biggestSpender = attendees[0];
+for (let attendee of attendees) {
+    if (attendee.spend > highestSpender.spend){
+        highestSpender = attendee
+    }
+}
