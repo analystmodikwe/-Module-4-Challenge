@@ -124,7 +124,28 @@ for (let attendee of attendees){
     } else {
         console.log(`Checking ${attendee.name}...`)
     } 
-}
+};
+
+// challenge7
+console.log("\n===== CHALLENGE 7 =====");
+// rewarding customers based on spending
+for(let attendee of attendees){
+    if(attendee.spend >= 1000){
+        console.log(`${attendee.name}: R200 FOOD VOUCHER`)
+    }
+
+    else if(attendee.spend >= 500){
+        console.log(`${attendee.name}: R100 FOOD VOUCHER`)
+    }
+   
+    else if(attendee.spend >= 300){
+        console.log(`${attendee.name}: R50 FOOD VOUCHER`)
+    }
+
+    else if(attendee.spend < 300){
+        console.log(`${attendee.name}: NO VOUCHER`)
+    }
+};
     
 
 
