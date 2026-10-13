@@ -24,13 +24,14 @@ for (let waitingToEnter of attendees) {
     }
 }
 
+// challenge 2 
 console.log("\n===== CHALLENGE 2 =====");
 let success = "ENTRY APPROVED";
 let declined = "ENTRY DENIED";
 let underAge = "UNDER 18";
 let ticketCheck = "NO VALID TICKET";
 
-
+// a for..of loop and if, else,els if for attendees who may enter who are 18 and above and have tickets
 for (let attendee of attendees )
 if(attendee.age >= 18 && attendee.hasTicket === true) {
     console.log(`${attendee.name}: ${success}`);
