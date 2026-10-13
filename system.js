@@ -83,4 +83,10 @@ for (let attendee of attendees){
 // chllange 4
 console.log("\n===== CHALLENGE 4 =====");
 
-for (let attendee of attendees)
+for (let attendee of attendees){
+    if(attendee.age >= 18 && attendee.hasTicket === true && attendee.ticket === "VIP"){
+        console.log(`${attendee.name}: LOUNGE ACCESS is APPROVED`);
+    } else {
+        console.log(`${attendee.name}: LOUNGE ACCESS is DENIED`);
+    }
+};
