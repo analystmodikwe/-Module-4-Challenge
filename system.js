@@ -184,10 +184,14 @@ for (let attendee of attendees) {
 
     totalSpend += attendee.spend   
 }
+// calculating the average per attendee
+let averageAmount = totalSpend / totalAttendees
+
+// consolelogs
 console.log(`totalAttendees: ${totalAttendees}`);
 console.log(`validTickets: ${validTickets}`);
 console.log(`invalidTickets: ${invalidTickets}`);
 console.log(`vipCount: ${vipCount}`);
-console.log(`generalCount: ${ totalSpend }`);
+console.log(`average amount spent per attendee: ${ averageAmount}`);
 // console.log(`totalSpend: ${attendee.spend}`);
 // console.log(`under18: ${under18}`);
