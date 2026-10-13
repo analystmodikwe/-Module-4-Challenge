@@ -175,8 +175,17 @@ for (let attendee of attendees) {
     if(attendee.age < 18) {
         under18 ++;
     }
+
+    if(attendee.ticket === "VIP"){
+        vipCount ++;
+    }else{
+        generalCount ++;
+    }
 }
 console.log(`totalAttendees: ${totalAttendees}`);
 console.log(`validTickets: ${validTickets}`);
 console.log(`invalidTickets: ${invalidTickets}`);
-console.log(`under18: ${under18}`);
+console.log(`vipCount: ${vipCount}`);
+console.log(`generalCount: ${generalCount}`);
+// console.log(`under18: ${under18}`);
+// console.log(`under18: ${under18}`);
