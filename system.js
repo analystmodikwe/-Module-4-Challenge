@@ -147,8 +147,31 @@ for(let attendee of attendees){
     }
 };
     
+// challenge8
+console.log("\n===== CHALLENGE 8 =====");
+// Calculate the total attendees in the queue, valid tickets, invalid tickets, under-18 attendees,
+// General ticket holders, VIP ticket holders, total amount spent, average amount spent per
+// attendee, and highest-spending attendee.
 
+let totalAttendees =0;
+let validTickets = 0;
+let invalidTickets = 0;
+let under18 = 0;
+let vipCount = 0;
+let generalCount = 0;
+let totalSpend = 0;
 
+for (let attendee of attendees) {
+    totalAttendees ++; 
+   
+    if(attendee.hasTicket === true){
+        validTickets ++;      
+    } 
 
-
-
+    else if(attendee.hasTicket === false) {
+        invalidTickets ++;
+    }
+}
+console.log(`totalAttendees: ${totalAttendees}`);
+console.log(`validTickets: ${validTickets}`);
+console.log(`invalidTickets: ${invalidTickets}`);
