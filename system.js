@@ -220,3 +220,29 @@ console.log (" ===== TOP CUSTOMER =====");
 console.log(`NAME: ${biggestSpender.name}`);
 console.log(`AMOUNT SPENT: ${biggestSpender.spend}`);
 console.log("REWARD: BACKSTAGE UPGRADE");
+
+// challenge 10
+console.log("\n===== CHALLENGE 10 =====");
+let capacity = 5;
+let peopleInside = 0;
+
+// . Process attendees one at a time. Only attendees who are 18 or older AND
+// have a valid ticket should be admitted. Every successful entry increments peopleInside. When
+// peopleInside equals capacity, display VENUE FULL and stop processing the queue using
+// break.
+for (let attendee of attendees){
+    if(attendee.age >= 18 && attendee.hasTicket === "true"){
+        console.log(`${attendee.name} entered`)
+    }
+    peopleInside ++;
+    console.log(`People inside: ${peopleInside} / 5`);
+
+    if(peopleInside === capacity){
+        console.log("VANUE FULL");
+        break;
+    }
+};
+ 
+
+
+
