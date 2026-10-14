@@ -231,19 +231,21 @@ let peopleInside = 0;
 // have a valid ticket should be admitted. Every successful entry increments peopleInside. When
 // peopleInside equals capacity, display VENUE FULL and stop processing the queue using
 // break.
-for (let attendee of attendees){
-    if(attendee.age >= 18 && attendee.hasTicket === "true"){
-        console.log(`${attendee.name} entered`)
-    }
-    peopleInside ++;
-    console.log(`People inside: ${peopleInside} / 5`);
+for (let attendee of attendees) {
 
-    if(peopleInside === capacity){
-        console.log("VANUE FULL");
-        break;
+    // Only admit adults with a valid ticket
+    if (attendee.age >= 18 && attendee.hasTicket === true) {
+        peopleInside++; // count only people who actually got in
+        console.log(`${attendee.name} entered`);
+        console.log(`People inside: ${peopleInside} / ${capacity}`);
+
+        // Venue is full: stop processing the rest of the queue
+        if (peopleInside === capacity) {
+            console.log("VENUE FULL");
+            break;
+        }
     }
-};
- 
+}
 // challenge 11
 console.log("\n===== CHALLENGE 11 =====");
 // Create a countdown from 10 minutes to 1 minute using a loop. At 5 minutes display WARNING:
