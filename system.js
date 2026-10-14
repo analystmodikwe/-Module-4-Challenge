@@ -311,4 +311,15 @@ switch(option){
         }
         break;
     }
+
+    // 3: only VIPs who are allowed in (VIP ticket + valid ticket + 18 or older)
+    case 3: {
+        console.log("===== ELIGIBLE VIP GUESTS =====");
+        for (let attendee of attendees) {
+            if (attendee.ticket === "VIP" && attendee.hasTicket === true && attendee.age >= 18) {
+                console.log(`${attendee.name} (Age: ${attendee.age})`);
+            }
+        }
+        break;
+    }
 }
