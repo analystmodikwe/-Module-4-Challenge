@@ -296,4 +296,19 @@ switch(option){
         console.log(line);
         break; // leaves the switch (not needed for the loop, it already finished)
     }
+
+    // 2: approve or deny each person, and check approved people in
+    case 2: {
+        for (let attendee of attendees) {
+            if (attendee.age >= 18 && attendee.hasTicket === true) {
+                attendee.checkedIn = true; // the real operation: update their record
+                console.log(`${attendee.name}: ENTRY APPROVED`);
+            } else if (attendee.age < 18) {
+                console.log(`${attendee.name}: ENTRY DENIED: UNDER 18`);
+            } else {
+                console.log(`${attendee.name}: ENTRY DENIED: NO VALID TICKET`);
+            }
+        }
+        break;
+    }
 }
