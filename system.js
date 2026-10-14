@@ -260,6 +260,7 @@ for(let min = 10; min >=1; min --) {
         console.log("PLEASE PROCEED TO THE EXIT.")
     }
 };
-console.log("FESTIVAL CLOSED.")
+console.log("FESTIVAL CLOSED.");
+
 
 
