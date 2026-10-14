@@ -459,3 +459,27 @@ for (let attendee of attendees) {
     }
 }
 
+// SUBMITIVE QUESTIONS AND ANSWERS
+// 1. Why did you use && for festival entry?
+// The rule says a person must be 18 or older and have a valid ticket. && needs both to be true. With ||, someone like Karabo (16, with a ticket) would get in, which is wrong.
+
+// 2. Where did you use else if and why?
+// I used it in the entry check, the voucher ranges and the ticket validity count. The entry check goes from approved, to under 18, to no ticket, and each person only needs one result. For vouchers, I check the highest range first so each person lands in only one range.
+
+// 3. Why is switch appropriate for the control menu?
+// The menu compares one variable (option) to fixed values from 1 to 7. A switch is cleaner than seven else if statements, and default catches invalid options.
+
+// 4. What is the difference between break in your search and continue in the security check?
+// break stops the whole loop. In the search, once Zanele is found there’s no reason to keep looking. continue skips only the current person. In the security check, Jason has no ticket, so I skip him and carry on with everyone else.
+
+// 5. How did you determine the biggest spender?
+// I started with biggestSpender = attendees[0] and looped through everyone. If someone’s spend was higher, they replaced the current biggest spender. I stored the whole attendee, so I could print their name too. Nothing is typed in, so if the data changes (like adding Neo), it still works.
+
+// 6. How did you prevent the venue from exceeding capacity?
+// I used a capacity variable (5) and a peopleInside counter. Each person who is 18+ with a valid ticket adds 1 to the counter. When it equals capacity, I print VENUE FULL and use break to stop the queue.
+
+// 7. What would happen if another 20 attendees were added to the array?
+// It would still work, because my loops use for...of, so they include everyone automatically. Totals and the biggest spender are calculated, not typed in. The venue would still stop at 5 people. The only difference is longer output.
+
+// 8. Which part of the project required the most problem-solving?
+// Challenge 5 (the search). My output looked right, but break was inside a switch, so it only left the switch and the loop kept running. I fixed it by using an if so break sat directly in the loop. Challenge 8 was second: my under-18 count showed 0 until I gave it its own if.
