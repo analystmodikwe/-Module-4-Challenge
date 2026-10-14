@@ -45,7 +45,7 @@ for (let attendee of attendees ){
         console.log(`${attendee.name}: ${declined}: ${underAge}`);
 
     }else{
-        console.log(`${attendee.name}: ${declined}: YOU ARE ${underAge} AND YOU HAVE ${ticketCheck} `);
+        console.log(`${attendee.name}: ${declined}: ${ticketCheck} `);
     }
 }
 
