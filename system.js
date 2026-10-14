@@ -322,4 +322,27 @@ switch(option){
         }
         break;
     }
+
+    // 4: everyone who cannot enter, with the reason
+    case 4: {
+        console.log("===== DENIED ATTENDEES =====");
+        for (let attendee of attendees) {
+            if (attendee.age >= 18 && attendee.hasTicket === true) {
+                continue; // allowed in, so skip to the next person
+            }
+
+            if (attendee.age < 18 && attendee.hasTicket === false) {
+                console.log(`${attendee.name}: UNDER 18 AND NO VALID TICKET`);
+            } else if (attendee.age < 18) {
+                console.log(`${attendee.name}: UNDER 18`);
+            } else {
+                console.log(`${attendee.name}: NO VALID TICKET`);
+            }
+        }
+        break;
+    }
+
+    
+
+
 }
