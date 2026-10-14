@@ -342,7 +342,48 @@ switch(option){
         break;
     }
 
-    
+    // 5: statistics calculated with counters
+    case 5: {
+        let totalAttendees = 0;
+        let validTickets = 0;
+        let invalidTickets = 0;
+        let under18 = 0;
+        let vipCount = 0;
+        let generalCount = 0;
+        let totalSpend = 0;
+
+        for (let attendee of attendees) {
+            totalAttendees++;
+            totalSpend += attendee.spend;
+
+            if (attendee.hasTicket === true) {
+                validTickets++;
+            } else {
+                invalidTickets++;
+            }
+
+            if (attendee.age < 18) {
+                under18++;
+            }
+
+            if (attendee.ticket === "VIP") {
+                vipCount++;
+            } else {
+                generalCount++;
+            }
+        }
+
+        console.log("===== FESTIVAL STATISTICS =====");
+        console.log(`Total Attendees: ${totalAttendees}`);
+        console.log(`Valid Tickets: ${validTickets}`);
+        console.log(`Invalid Tickets: ${invalidTickets}`);
+        console.log(`Under 18: ${under18}`);
+        console.log(`VIP: ${vipCount}`);
+        console.log(`General: ${generalCount}`);
+        console.log(`Total Spend: R${totalSpend}`);
+        console.log(`Average Spend: R${totalSpend / totalAttendees}`);
+        break;
+    }
 
 
 }
