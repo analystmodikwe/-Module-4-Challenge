@@ -265,14 +265,8 @@ console.log("FESTIVAL CLOSED.");
 // final challenge 
 console.log("\n===== FINAL CHALLENGE =====");
 
-
-// let day = 2;
-// switch (day) {
-// case 1: console.log("Monday"); break;
-// case 2: console.log("Tuesday"); break;
-// case 3: console.log("Wednesday"); break;
-// default: console.log("Invalid day");
 let option = 2;
+// displaying the menue
 console.log(line);
 console.log("FESTIVAL CONTROL");
 console.log(line);
@@ -285,7 +279,21 @@ console.log("6 - Find Biggest Spender");
 console.log("7 - Close Festival");
 console.log(line);
 
-switch (option){
-    case 1: console.log("- View Attendee Queue"); break;
-    case 2: console.log("- Process Entry"); break;
+// The selected option must perform the appropriate operation, not merely print the option name.
+// For example, option 3 should display only eligible VIP guests. Option 4 should display people
+// who cannot enter and the reason. Option 5 should display statistics calculated by the program.
+
+switch(option){
+    // 1: show everyone waiting
+    case 1: {
+        for (let attendee of attendees) {
+            console.log(line);
+            console.log(`Name: ${attendee.name}`);
+            console.log(`Age: ${attendee.age}`);
+            console.log(`Ticket: ${attendee.ticket}`);
+            console.log(`Valid Ticket: ${attendee.hasTicket}`);
+        }
+        console.log(line);
+        break; // leaves the switch (not needed for the loop, it already finished)
+    }
 }
