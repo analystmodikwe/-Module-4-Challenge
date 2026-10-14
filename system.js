@@ -262,5 +262,30 @@ for(let min = 10; min >=1; min --) {
 };
 console.log("FESTIVAL CLOSED.");
 
+// final challenge 
+console.log("\n===== FINAL CHALLENGE =====");
 
 
+// let day = 2;
+// switch (day) {
+// case 1: console.log("Monday"); break;
+// case 2: console.log("Tuesday"); break;
+// case 3: console.log("Wednesday"); break;
+// default: console.log("Invalid day");
+let option = 2;
+console.log(line);
+console.log("FESTIVAL CONTROL");
+console.log(line);
+console.log("1 - View Attendee Queue");
+console.log("2 - Process Entry");
+console.log("3 - View VIP Guests");
+console.log("4 - View Denied Attendees");
+console.log("5 - View Festival Statistics");
+console.log("6 - Find Biggest Spender");
+console.log("7 - Close Festival");
+console.log(line);
+
+switch (option){
+    case 1: console.log("- View Attendee Queue"); break;
+    case 2: console.log("- Process Entry"); break;
+}
