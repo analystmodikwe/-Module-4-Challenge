@@ -385,5 +385,22 @@ switch(option){
         break;
     }
 
+    // 6: highest spender
+    case 6: {
+        let biggestSpender = attendees[0]; // start with the first person
+
+        for (let attendee of attendees) {
+            if (attendee.spend > biggestSpender.spend) {
+                biggestSpender = attendee; // new leader
+            }
+        }
+
+        console.log("===== TOP CUSTOMER =====");
+        console.log(`Name: ${biggestSpender.name}`);
+        console.log(`Amount Spent: R${biggestSpender.spend}`);
+        break;
+    }
+
+    
 
 }
