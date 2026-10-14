@@ -428,7 +428,7 @@ switch(option){
 
 console.log("\n===== SURPRISE TEST =====");
 
-// Surprise test data: this MUST come before the loops below
+// Surprise test data: 
 attendees.push({ name: "Neo", age: 23, ticket: "VIP", hasTicket: true, checkedIn: false, spend: 1500 });
 
 // while loop: count VIP ticket holders, including Neo
