@@ -243,6 +243,23 @@ for (let attendee of attendees){
     }
 };
  
+// challenge 11
+console.log("\n===== CHALLENGE 11 =====");
+// Create a countdown from 10 minutes to 1 minute using a loop. At 5 minutes display WARNING:
+// LAST ENTRY HAS ENDED. At 2 minutes display PLEASE PROCEED TO THE EXIT. After the
+// countdown display FESTIVAL CLOSED
 
+for(let min = 10; min >=1; min --) {
+    console.log(`${min} minutes remaining`);
+
+    if(min <= 5){
+        console.log("WARNING: LAST ENTRY HAS ENDED. ")
+    }
+    
+    if(min <= 2){
+        console.log("PLEASE PROCEED TO THE EXIT.")
+    }
+};
+console.log("FESTIVAL CLOSED.")
 
 
