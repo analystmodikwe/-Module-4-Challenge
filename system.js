@@ -401,6 +401,24 @@ switch(option){
         break;
     }
 
-    
+    // 7: close the festival
+    case 7: {
+        let checkedInCount = 0;
 
+        for (let attendee of attendees) {
+            if (attendee.checkedIn === true) {
+                checkedInCount++;
+            }
+        }
+
+        console.log(`People checked in: ${checkedInCount}`);
+        console.log("FESTIVAL CLOSED.");
+        break;
+    }
+
+    // runs when option doesn't match any case
+    default:
+        console.log("INVALID OPTION. Please choose 1 to 7.");
 }
+
+
