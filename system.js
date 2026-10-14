@@ -9,6 +9,7 @@ let attendees = [
   { name: "Michael", age: 28, ticket: "General", hasTicket: true,  checkedIn: false, spend: 450 } 
 ];
 
+
 console.log("\n===== CHALLENGE 1 =====");
 let line = "=============================="
 // using for..of loop to displayname age ticket valid ticket
@@ -419,6 +420,40 @@ switch(option){
     // runs when option doesn't match any case
     default:
         console.log("INVALID OPTION. Please choose 1 to 7.");
-}
+};
 
+// SURPRICE TEST 
+
+console.log("\n===== SURPRISE TEST =====");
+
+// Surprise test data: this MUST come before the loops below
+attendees.push({ name: "Neo", age: 23, ticket: "VIP", hasTicket: true, checkedIn: false, spend: 1500 });
+
+// while loop: count VIP ticket holders, including Neo
+let w = 0;           // current position in the array
+let vipTotal = 0;    // how many VIPs we've found
+while (w < attendees.length) { // .length grows automatically when Neo is pushed
+    if (attendees[w].ticket === "VIP") {
+        vipTotal++;
+    }
+    w++; // without this the loop would never end
+}
+console.log(`VIP holders (while): ${vipTotal}`); // 4 with Neo
+
+// do...while: add up all spend (the body runs at least once)
+let d = 0;
+let spendTotal = 0;
+do {
+    spendTotal += attendees[d].spend;
+    d++;
+} while (d < attendees.length);
+console.log(`Total spend (do...while): R${spendTotal}`); // R6150 with Neo
+
+// for...in inside for...of: show every property of EVERY attendee
+for (let attendee of attendees) {
+    console.log("------------------------");
+    for (let key in attendee) {
+        console.log(`${key}: ${attendee[key]}`); // name, age, ticket, hasTicket, ...
+    }
+}
 
